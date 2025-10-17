@@ -1,0 +1,406 @@
+/* Login Page */
+.loginContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  padding: 2rem;
+}
+
+.loginCard {
+  background: white;
+  border: 2px solid var(--primary);
+  border-radius: 16px;
+  padding: 3rem;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.loginTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: var(--font-poppins);
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.loginBtn {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-poppins);
+}
+
+.loginBtn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Admin Dashboard */
+.adminContainer {
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.adminHeader {
+  background: var(--primary);
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.adminHeader h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: var(--font-poppins);
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  color: var(--primary);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-poppins);
+}
+
+.logoutBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.adminContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Form Section */
+.formSection {
+  background: white;
+  border: 2px solid var(--primary);
+  border-radius: 16px;
+  padding: 2rem;
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+}
+
+.formHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.formHeader h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: var(--font-poppins);
+}
+
+.cancelBtn {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-poppins);
+}
+
+.cancelBtn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.postForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: var(--foreground);
+  font-family: var(--font-poppins);
+}
+
+.input,
+.textarea,
+.select {
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--font-poppins);
+  transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.checkboxLabel:hover {
+  background: #f0f0f0;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.checkboxText {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--foreground);
+  font-family: var(--font-poppins);
+}
+
+.submitBtn {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-poppins);
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Posts List Section */
+.postsSection {
+  background: white;
+  border: 2px solid var(--primary);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.postsSection h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-poppins);
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem;
+  color: var(--foreground);
+  opacity: 0.7;
+  font-family: var(--font-poppins);
+}
+
+.postsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.postItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.postItem:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.postInfo {
+  flex: 1;
+}
+
+.postMeta {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.statusBadge,
+.categoryBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: var(--font-poppins);
+}
+
+.statusBadge.published {
+  background: var(--accent);
+  color: white;
+}
+
+.statusBadge.draft {
+  background: #ffa500;
+  color: white;
+}
+
+.categoryBadge {
+  background: var(--primary);
+  color: white;
+}
+
+.postTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-poppins);
+}
+
+.postExcerpt {
+  color: var(--foreground);
+  opacity: 0.8;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-poppins);
+}
+
+.postDate {
+  font-size: 0.85rem;
+  color: var(--foreground);
+  opacity: 0.6;
+  font-family: var(--font-fira-code);
+}
+
+.postActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editBtn,
+.deleteBtn {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editBtn {
+  background: var(--primary);
+  color: white;
+}
+
+.editBtn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.deleteBtn {
+  background: #ff4444;
+  color: white;
+}
+
+.deleteBtn:hover {
+  background: #cc0000;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .adminContent {
+    grid-template-columns: 1fr;
+  }
+
+  .formSection {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .adminHeader {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .adminContent {
+    padding: 1rem;
+  }
+
+  .formSection,
+  .postsSection {
+    padding: 1.5rem;
+  }
+}

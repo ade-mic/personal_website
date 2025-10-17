@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3F51B5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a2a6c;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background circle with gradient -->
+  <circle cx="50" cy="50" r="48" fill="url(#bgGradient)"/>
+  
+  <!-- Abstract AA Design - Rotated 180 degrees with accent color -->
+  <g transform="rotate(180, 50, 50)" filter="url(#shadow)">
+    <path d="M 30,35 L 45,65 L 60,35" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 40,35 L 55,65 L 70,35" fill="none" stroke="#2ECC71" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Decorative elements with accent color -->
+    <circle cx="35" cy="40" r="3" fill="#ffffff"/>
+    <circle cx="65" cy="40" r="3" fill="#2ECC71"/>
+  </g>
+</svg>
