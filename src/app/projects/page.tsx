@@ -4,7 +4,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './page.module.css';
-import { ArrowLeft, ExternalLink, Calendar, Tag, Github, Globe, Briefcase, FileText, Download } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Globe, } from 'lucide-react';
+import HireMe from '@/components/HireMe';
 
 const projects = [
   {
@@ -145,44 +146,8 @@ export default function ProjectsPage() {
           <p className={styles.pageSubtitle}>
             Showcasing impactful solutions in software engineering, data analytics, and research
           </p>
-          <div className={styles.headerActions}>
-            <a 
-              href="https://1drv.ms/w/c/1054ed53d0671c19/EbcTrUmgYPpPsHJ0PRVUabsBWyzRqdsvmjVHD7bZk8jouA?e=ugJYx6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.cvButton}
-            >
-              <FileText size={20} />
-              View CV
-            </a>
-            <a 
-              href="mailto:enquiries@example.com?subject=Job Opportunity"
-              className={styles.hireButton}
-            >
-              <Briefcase size={20} />
-              Hire Me
-            </a>
-          </div>
         </div>
       </header>
-
-      <div className={styles.roleSection}>
-        <h2 className={styles.roleTitle}>Available For:</h2>
-        <div className={styles.roleCards}>
-          <div className={styles.roleCard}>
-            <h3>Research Assistant</h3>
-            <p>Agricultural research, data analysis, and academic collaboration</p>
-          </div>
-          <div className={styles.roleCard}>
-            <h3>Data Analyst</h3>
-            <p>Data processing, visualization, and insights generation</p>
-          </div>
-          <div className={styles.roleCard}>
-            <h3>Software Engineer</h3>
-            <p>Full-stack development, AI/ML integration, and system architecture</p>
-          </div>
-        </div>
-      </div>
 
       <div className={styles.filterSection}>
         <div className={styles.filterButtons}>
@@ -242,6 +207,9 @@ export default function ProjectsPage() {
           </div>
         ))}
       </div>
+      <div className={styles.hireMeSection}>
+        <HireMe />
+      </div>
     </div>
-  );
+    );
 }

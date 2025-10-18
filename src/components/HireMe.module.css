@@ -1,0 +1,172 @@
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--background);
+}
+
+.contactSection {
+  margin-top: 4rem;
+}
+
+.contactTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: var(--font-poppins);
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contactCard {
+  background: white;
+  border: 2px solid var(--primary);
+  border-left: 6px solid var(--accent);
+  border-radius: 16px;
+  padding: 2rem;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contactCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(63, 81, 181, 0.15);
+}
+
+.contactIcon {
+  background: var(--accent);
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.contactCard h4 {
+  color: var(--foreground);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-poppins);
+}
+
+.contactCard p {
+  color: var(--foreground);
+  opacity: 0.8;
+  font-family: var(--font-poppins);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.cvSection {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cvButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: var(--primary);
+  color: white;
+  border: 2px solid var(--primary);
+}
+
+.cvButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(63, 81, 181, 0.2);
+  background: var(--primary-dark);
+}
+
+.roleSection {
+  margin-top: 3rem;
+}
+
+.roleTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  font-family: var(--font-poppins);
+  text-align: center;
+}
+
+.roleCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.roleCard {
+  background: white;
+  border: 2px solid var(--primary);
+  border-left: 6px solid var(--accent);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.roleCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(63, 81, 181, 0.15);
+}
+
+.roleCard h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+  font-family: var(--font-poppins);
+}
+
+.roleCard p {
+  color: var(--foreground);
+  font-family: var(--font-poppins);
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .headerActions {
+    flex-direction: column;
+  }
+
+  .cvButton,
+  .hireButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .roleCards {
+    grid-template-columns: 1fr;
+  }
+
+  .roleCard {
+    padding: 1.5rem;
+  }
+}
