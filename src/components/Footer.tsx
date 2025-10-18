@@ -48,7 +48,7 @@ export default function Footer() {
             <a href="https://github.com/ade-mic" target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
-            <a href="https://www.linkedin.com/in/ademola-micheal-aina" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/ademola-aina-m" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
             <Link href="mailto:ademola.aina@outlook.com">Email</Link>
