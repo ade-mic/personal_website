@@ -24,9 +24,6 @@ export default function Home() {
             <h1 className={styles.heroTitle}>
               Ademola Aina
             </h1>
-            <h2 className={styles.heroSubtitle}>
-              Bridging Research and Real-World Innovation
-            </h2>
             <ul className={styles.heroTags}>
                 <li>
                   <GraduationCap className={styles.heroTagIcon} />
@@ -273,7 +270,7 @@ export default function Home() {
           <div className={styles.contactContainer}>
             <p className={styles.contactText}>
               Whether you're interested in collaboration on research projects, software development opportunities, 
-              or just want to discuss ideas at the intersection of technology and sustainability—I'd love to hear from you.
+              or just want to discuss ideas at the intersection of technology and sustainability, I'd love to hear from you.
             </p>
             <div className={styles.contactGrid}>
               <div className={styles.contactCard}>
