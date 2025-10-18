@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './page.module.css';
-import { ArrowLeft, ExternalLink, Calendar, Tag, Github, Globe } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Calendar, Tag, Github, Globe, Briefcase, FileText, Download } from 'lucide-react';
 
 const projects = [
   {
@@ -28,86 +28,6 @@ const projects = [
     year: '2024'
   },
   {
-    id: 'afripub',
-    title: 'Afripub',
-    category: 'Research Platform',
-    description: 'A research visibility platform for African scholars to enhance collaboration and knowledge sharing',
-    longDescription: 'Afripub is building a comprehensive platform to increase the visibility of African research and foster collaboration among scholars across the continent. The platform will feature publication databases, researcher profiles, and collaboration tools.',
-    features: [
-      'Currently in development',
-      'Connects researchers across Africa',
-      'Publication database and collaboration tools',
-      'Enhances visibility of African research',
-      'Research metrics and analytics',
-      'Networking and collaboration features'
-    ],
-    technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'AWS', 'GraphQL'],
-    link: null,
-    github: null,
-    status: 'development',
-    year: '2025'
-  },
-  {
-    id: 'farmcollab',
-    title: 'FarmCollab',
-    category: 'Marketplace',
-    description: 'Marketplace platform connecting farmers with buyers for seamless produce sales',
-    longDescription: 'FarmCollab creates a direct connection between farmers and buyers, eliminating middlemen and ensuring fair prices. The platform features real-time inventory management, secure transactions, and logistics coordination.',
-    features: [
-      'Direct farmer-to-buyer marketplace',
-      'Real-time inventory management',
-      'Secure transaction system',
-      'Mobile-responsive design',
-      'Logistics coordination',
-      'Price transparency tools'
-    ],
-    technologies: ['React', 'Firebase', 'E-commerce', 'Payment Integration', 'Node.js'],
-    link: null,
-    github: null,
-    status: 'live',
-    year: '2023'
-  },
-  {
-    id: 'reuseng',
-    title: 'ReUseNG',
-    category: 'Sustainability',
-    description: 'Sustainability-focused e-commerce landing page promoting reuse and circular economy',
-    longDescription: 'ReUseNG promotes sustainable consumption through a beautifully designed platform that encourages reuse and circular economy principles. The platform educates users about environmental impact while providing access to sustainable products.',
-    features: [
-      'Modern, conversion-optimized design',
-      'Sustainability messaging and branding',
-      'Responsive and accessible',
-      'Fast, optimized performance',
-      'Environmental impact calculator',
-      'Educational content integration'
-    ],
-    technologies: ['React', 'Next.js', 'UI/UX', 'SEO', 'Analytics'],
-    link: null,
-    github: null,
-    status: 'live',
-    year: '2024'
-  },
-  {
-    id: 'nrabc',
-    title: 'NRABC Website',
-    category: 'Web Platform',
-    description: 'Scalable React-based outreach platform for the National Research and Advisory Board',
-    longDescription: 'A comprehensive web platform built for the National Research and Advisory Board to manage their outreach activities, publish research findings, and engage with stakeholders. The platform handles large-scale traffic and complex content management needs.',
-    features: [
-      'Comprehensive information architecture',
-      'Content management system',
-      'Multi-page navigation structure',
-      'Optimized for large-scale traffic',
-      'Advanced search functionality',
-      'User engagement analytics'
-    ],
-    technologies: ['React', 'CMS', 'Scalability', 'Performance', 'CDN', 'Caching'],
-    link: null,
-    github: null,
-    status: 'live',
-    year: '2023'
-  },
-  {
     id: 'automenders',
     title: 'The Auto Menders',
     category: 'Web Application',
@@ -125,7 +45,7 @@ const projects = [
     link: 'https://www.theautomenders.com/',
     github: null,
     status: 'live',
-    year: '2023'
+    year: '2025'
   }
 ];
 
@@ -212,13 +132,6 @@ export default function ProjectsPage() {
 
   return (
     <div className={styles.container}>
-      <nav className={styles.topNav}>
-        <Link href="/" className={styles.backLink}>
-          <ArrowLeft size={20} />
-          Home
-        </Link>
-      </nav>
-
       <header className={styles.pageHeader}>
         <div className={styles.headerContent}>
           <Image
@@ -228,12 +141,48 @@ export default function ProjectsPage() {
             height={60}
             className={styles.headerLogo}
           />
-          <h1 className={styles.pageTitle}>Featured Projects</h1>
+          <h1 className={styles.pageTitle}>Engineering Portfolio</h1>
           <p className={styles.pageSubtitle}>
-            Innovative solutions at the intersection of agriculture, education, and technology
+            Showcasing impactful solutions in software engineering, data analytics, and research
           </p>
+          <div className={styles.headerActions}>
+            <a 
+              href="https://1drv.ms/w/c/1054ed53d0671c19/EbcTrUmgYPpPsHJ0PRVUabsBWyzRqdsvmjVHD7bZk8jouA?e=ugJYx6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.cvButton}
+            >
+              <FileText size={20} />
+              View CV
+            </a>
+            <a 
+              href="mailto:enquiries@example.com?subject=Job Opportunity"
+              className={styles.hireButton}
+            >
+              <Briefcase size={20} />
+              Hire Me
+            </a>
+          </div>
         </div>
       </header>
+
+      <div className={styles.roleSection}>
+        <h2 className={styles.roleTitle}>Available For:</h2>
+        <div className={styles.roleCards}>
+          <div className={styles.roleCard}>
+            <h3>Research Assistant</h3>
+            <p>Agricultural research, data analysis, and academic collaboration</p>
+          </div>
+          <div className={styles.roleCard}>
+            <h3>Data Analyst</h3>
+            <p>Data processing, visualization, and insights generation</p>
+          </div>
+          <div className={styles.roleCard}>
+            <h3>Software Engineer</h3>
+            <p>Full-stack development, AI/ML integration, and system architecture</p>
+          </div>
+        </div>
+      </div>
 
       <div className={styles.filterSection}>
         <div className={styles.filterButtons}>

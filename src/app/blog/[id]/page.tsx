@@ -10,7 +10,6 @@ import { ArrowLeft, Calendar, Tag } from 'lucide-react';
 
 export default function BlogPostPage() {
   const params = useParams();
-  const router = useRouter();
   const [post, setPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(true);
 

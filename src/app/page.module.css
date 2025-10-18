@@ -6,7 +6,7 @@
 }
 
 /* Navigation */
-.nav {
+about.nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -86,7 +86,7 @@
 
 /* Main Content */
 .main {
-  padding-top: 80px;
+  padding-top: 10px;
   max-width: 1200px;
   margin: 0 auto;
   padding-left: 2rem;
@@ -100,11 +100,12 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 4rem 0;
+  padding: 0;
 }
 
 .heroContent {
   max-width: 800px;
+  margin-top: 10px;
 
 }
 
@@ -117,7 +118,7 @@
 /* View All Buttons */
 .viewAllContainer {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 1.7rem;
 }
 
 .viewAllBtn {
@@ -176,13 +177,284 @@
   font-family: var(--font-poppins);
 }
 
-.heroDescription {
-  font-size: 1.1rem;
-  color: var(--foreground);
+.heroTags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   margin-bottom: 2.5rem;
-  opacity: 0.8;
-  font-family: var(--font-fira-code);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroTags li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(63, 81, 181, 0.1);
+  padding: 0.75rem 1.25rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  color: var(--primary);
+  font-family: var(--font-poppins);
+}
+
+/* Hire Me Section */
+.hireSection {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.hireSectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--foreground);
+  font-family: var(--font-poppins);
+}
+
+.roleCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.roleCard {
+  background: white;
+  border: 2px solid var(--primary);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.roleCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(63, 81, 181, 0.15);
+}
+
+.roleIcon {
+  width: 48px;
+  height: 48px;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.roleCard h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+  font-family: var(--font-poppins);
+}
+
+.roleCard p {
+  font-size: 1rem;
   line-height: 1.6;
+  color: var(--foreground);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-poppins);
+}
+
+.viewCvBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: var(--font-poppins);
+  transition: all 0.3s ease;
+}
+
+.viewCvBtn:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.connectSection {
+  margin-top: 4rem;
+  padding-top: 4rem;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.connectTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--foreground);
+  font-family: var(--font-poppins);
+}
+
+.socialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.socialCard {
+  background: white;
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.socialCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(63, 81, 181, 0.15);
+}
+
+.socialIcon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-light);
+  border-radius: 50%;
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.socialCard:hover .socialIcon {
+  background: var(--primary);
+  color: white;
+}
+
+.socialCard h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+  font-family: var(--font-poppins);
+}
+
+.socialCard p {
+  font-size: 0.875rem;
+  color: var(--foreground);
+  opacity: 0.8;
+  font-family: var(--font-poppins);
+}
+
+.heroTags li:hover {
+  transform: translateY(-2px);
+  background: rgba(63, 81, 181, 0.15);
+  box-shadow: 0 4px 12px rgba(63, 81, 181, 0.1);
+}
+
+.heroTagIcon {
+  color: var(--accent);
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Add these styles to your page.module.css file */
+.cvBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  background: white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cvBtn:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.hireContainer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.hireBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.hireBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+}
+
+.hireBtnIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.roleTagsContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.roleTag {
+  padding: 0.5rem 1rem;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: var(--font-poppins);
+}
+
+@media (max-width: 768px) {
+  .heroTags {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .heroTags li {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTags li {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.875rem;
+  }
+  
+  .heroTagIcon {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .ctas {
@@ -231,7 +503,7 @@
 
 /* Section */
 .section {
-  padding: 6rem 0;
+  padding: 3rem 0;
 }
 
 .sectionTitle {
@@ -263,6 +535,7 @@
   line-height: 1.8;
   margin-bottom: 1.5rem;
   font-family: var(--font-poppins);
+  text-align: justify;
 }
 
 .currentFocusTitle {
@@ -877,6 +1150,23 @@
   .navLinks {
     display: none;
   }
+
+    .ctas {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cvBtn,
+  .hireBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .roleTagsContainer {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -971,5 +1261,27 @@
   .logoText {
     align-items: center;
     text-align: center;
+  }
+
+  /* Hire Section Responsive */
+  .hireSectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .roleCards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .roleCard {
+    padding: 1.5rem;
+  }
+
+  .connectTitle {
+    font-size: 1.5rem;
+  }
+
+  .socialGrid {
+    grid-template-columns: 1fr;
   }
 }

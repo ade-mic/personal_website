@@ -29,7 +29,7 @@
 .pageHeader {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: white;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 3rem;
   text-align: center;
 }
 
@@ -55,6 +55,102 @@
   opacity: 0.9;
   font-family: var(--font-poppins);
   line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.headerActions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.cvButton,
+.hireButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cvButton {
+  background: white;
+  color: var(--primary);
+  border: 2px solid white;
+}
+
+.cvButton:hover {
+  background: transparent;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.hireButton {
+  background: var(--accent);
+  color: white;
+  border: 2px solid var(--accent);
+}
+
+.hireButton:hover {
+  background: transparent;
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+.roleSection {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.roleTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--foreground);
+  font-family: var(--font-poppins);
+}
+
+.roleCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.roleCard {
+  background: white;
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.roleCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(63, 81, 181, 0.15);
+}
+
+.roleCard h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  font-family: var(--font-poppins);
+}
+
+.roleCard p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--foreground);
+  opacity: 0.8;
+  font-family: var(--font-poppins);
 }
 
 .filterSection {

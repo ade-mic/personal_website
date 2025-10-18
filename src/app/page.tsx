@@ -7,32 +7,6 @@ import BlogSection from "@/components/BlogSection";
 export default function Home() {
   return (
     <div className={styles.page}>
-      {/* Navigation */}
-      <nav className={styles.nav}>
-        <div className={styles.navContainer}>
-          <div className={styles.logoContainer}>
-            <Image
-              src="/logo.svg"
-              alt="Ademola Aina Logo"
-              width={40}
-              height={40}
-              className={styles.logoImage}
-            />
-            <div className={styles.logoText}>
-              <p className={styles.logoTagline}>Ademola Aina</p>
-            </div>
-          </div>
-          <ul className={styles.navLinks}>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-
       <main className={styles.main}>
         {/* Hero Section */}
         <section className={styles.hero} id="home">
@@ -53,49 +27,53 @@ export default function Home() {
             <h2 className={styles.heroSubtitle}>
               Bridging Research and Real-World Innovation
             </h2>
-            <p className={styles.heroDescription}>
-              PhD Researcher • Full-Stack Software Engineer • Builder of AI-Driven Solutions for Agriculture, Education, and Sustainability
-            </p>
-            <div className={styles.ctas}>
-              <a href="#projects" className={styles.primaryBtn}>
-                View Projects
-              </a>
-              <a href="#contact" className={styles.secondaryBtn}>
-                Get In Touch
-              </a>
-            </div>
+            <ul className={styles.heroTags}>
+                <li>
+                  <GraduationCap className={styles.heroTagIcon} />
+                  <span>PhD researcher</span>
+                </li>
+                <li>
+                  <Code className={styles.heroTagIcon} />
+                  <span>Full-stack engineer</span>
+                </li>
+                <li>
+                  <Sprout className={styles.heroTagIcon} />
+                  <span>Technology Integration for Sustainable Practices</span>
+                </li>
+              </ul>
           </div>
-        </section>
-
-        {/* About Section */}
+        </section>        {/* About Section */}
         <section className={styles.section} id="about">
           <h2 className={styles.sectionTitle}>About Me</h2>
           <div className={styles.aboutContainer}>
             <div className={styles.aboutContent}>
               <p className={styles.aboutText}>
                 I'm <strong>Ademola Aina</strong>, a PhD candidate in Agricultural Process Engineering with a passion for 
-                building intelligent, scalable software. My work blends computational modeling, machine learning, and 
-                full-stack development to solve real-world problems—from postharvest fruit optimization to AI-powered 
-                interview simulations.
+                building intelligent, scalable software.
+                I combine computational modeling, data science, 
+                and AI to create scalable solutions that solve complex real-world challenges, 
+                from optimizing postharvest fruit systems to building user-friendly, and intelligent
+                web platforms.
+                 I enjoy turning research insights into practical, user-focused technology.
               </p>
               
               <h3 className={styles.currentFocusTitle}>Current Focus</h3>
               <ul className={styles.focusList}>
                 <li>
                   <GraduationCap className={styles.focusIcon} />
-                  <span>Pursuing a PhD in precision agriculture and postharvest modeling</span>
+                  <span>PhD candidate in Agricultural Process Engineering, applying AI to disease detection in fresh produce.</span>
                 </li>
                 <li>
                   <Code className={styles.focusIcon} />
-                  <span>Building Afripub, a platform for African research visibility and collaboration</span>
+                  <span>Full-Stack Engineer of Afripub — a digital platform for publishing and promoting African literature.</span>
                 </li>
                 <li>
                   <Lightbulb className={styles.focusIcon} />
-                  <span>Previously led full-stack development on myInterviewerAI, an AI-powered interview simulation platform</span>
+                  <span>Full-Stack Engineer of MyInterviewerAI, an AI-driven interview simulation platform.</span>
                 </li>
                 <li>
                   <Sprout className={styles.focusIcon} />
-                  <span>Exploring sustainable tech integration through academic research and software innovation</span>
+                  <span>Advancing sustainable innovation through the fusion of research, AI, and software engineering.</span>
                 </li>
               </ul>
               
@@ -149,7 +127,7 @@ export default function Home() {
             {/* MyInterviewerAI Project */}
             <div className={styles.projectCard}>
               <div className={styles.projectHeader}>
-                <h3 className={styles.projectTitle}>myInterviewerAI</h3>
+                <h3 className={styles.projectTitle}>MyInterviewerAI</h3>
                 <span className={styles.projectTag}>AI Platform</span>
               </div>
               <p className={styles.projectDescription}>
@@ -158,7 +136,7 @@ export default function Home() {
               <ul className={styles.projectFeatures}>
                 <li>Led full-stack development of the platform</li>
                 <li>Real-time AI-powered feedback system</li>
-                <li>Machine learning assessment algorithms</li>
+                <li>LLM assessment</li>
                 <li>Interactive interview simulations</li>
               </ul>
               <div className={styles.projectTech}>
@@ -174,103 +152,8 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className={styles.projectLink}
                 >
-                  Live Demo →
+                  Live App →
                 </a>
-              </div>
-            </div>
-
-            {/* Afripub Project */}
-            <div className={styles.projectCard}>
-              <div className={styles.projectHeader}>
-                <h3 className={styles.projectTitle}>Afripub</h3>
-                <span className={styles.projectTag}>Research Platform</span>
-              </div>
-              <p className={styles.projectDescription}>
-                A research visibility platform for African scholars to enhance collaboration and knowledge sharing
-              </p>
-              <ul className={styles.projectFeatures}>
-                <li>Currently in development</li>
-                <li>Connects researchers across Africa</li>
-                <li>Publication database and collaboration tools</li>
-                <li>Enhances visibility of African research</li>
-              </ul>
-              <div className={styles.projectTech}>
-                <span className={styles.techBadge}>Next.js</span>
-                <span className={styles.techBadge}>TypeScript</span>
-                <span className={styles.techBadge}>Database</span>
-                <span className={styles.techBadge}>Cloud Platform</span>
-              </div>
-              <div className={styles.projectLinks}>
-                <span className={styles.comingSoon}>Coming Soon</span>
-              </div>
-            </div>
-
-            {/* FarmCollab Project */}
-            <div className={styles.projectCard}>
-              <div className={styles.projectHeader}>
-                <h3 className={styles.projectTitle}>FarmCollab</h3>
-                <span className={styles.projectTag}>Marketplace</span>
-              </div>
-              <p className={styles.projectDescription}>
-                Marketplace platform connecting farmers with buyers for seamless produce sales
-              </p>
-              <ul className={styles.projectFeatures}>
-                <li>Direct farmer-to-buyer marketplace</li>
-                <li>Real-time inventory management</li>
-                <li>Secure transaction system</li>
-                <li>Mobile-responsive design</li>
-              </ul>
-              <div className={styles.projectTech}>
-                <span className={styles.techBadge}>React</span>
-                <span className={styles.techBadge}>Firebase</span>
-                <span className={styles.techBadge}>E-commerce</span>
-                <span className={styles.techBadge}>Payment Integration</span>
-              </div>
-            </div>
-
-            {/* ReUseNG Project */}
-            <div className={styles.projectCard}>
-              <div className={styles.projectHeader}>
-                <h3 className={styles.projectTitle}>ReUseNG</h3>
-                <span className={styles.projectTag}>Sustainability</span>
-              </div>
-              <p className={styles.projectDescription}>
-                Sustainability-focused e-commerce landing page promoting reuse and circular economy
-              </p>
-              <ul className={styles.projectFeatures}>
-                <li>Modern, conversion-optimized design</li>
-                <li>Sustainability messaging and branding</li>
-                <li>Responsive and accessible</li>
-                <li>Fast, optimized performance</li>
-              </ul>
-              <div className={styles.projectTech}>
-                <span className={styles.techBadge}>React</span>
-                <span className={styles.techBadge}>Next.js</span>
-                <span className={styles.techBadge}>UI/UX</span>
-                <span className={styles.techBadge}>SEO</span>
-              </div>
-            </div>
-
-            {/* NRABC Website */}
-            <div className={styles.projectCard}>
-              <div className={styles.projectHeader}>
-                <h3 className={styles.projectTitle}>NRABC Website</h3>
-                <span className={styles.projectTag}>Web Platform</span>
-              </div>
-              <p className={styles.projectDescription}>
-                Scalable React-based outreach platform for the National Research and Advisory Board
-              </p>
-              <ul className={styles.projectFeatures}>
-                <li>Comprehensive information architecture</li>
-                <li>Content management system</li>
-                <li>Multi-page navigation structure</li>
-                <li>Optimized for large-scale traffic</li>
-              </ul>
-              <div className={styles.projectTech}>
-                <span className={styles.techBadge}>React</span>
-                <span className={styles.techBadge}>CMS</span>
-                <span className={styles.techBadge}>Scalability</span>
-                <span className={styles.techBadge}>Performance</span>
               </div>
             </div>
 
@@ -374,7 +257,15 @@ export default function Home() {
         </section>
 
         {/* Blog Section */}
-        <BlogSection />
+        <div>
+          <BlogSection />
+          <div className={styles.viewAllContainer}>
+            <Link href="/blog" className={styles.viewAllBtn}>
+              View All Blog Posts
+              <ArrowRight className={styles.arrowIcon} />
+            </Link>
+          </div>
+        </div>
 
         {/* Contact Section */}
         <section className={styles.section} id="contact">
@@ -413,52 +304,59 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className={styles.contactLinks}>
-              <a href="mailto:your.email@example.com" className={styles.contactBtn}>
-                <Mail size={20} />
-                <span>Email Me</span>
-              </a>
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className={styles.contactBtnSecondary}>
-                <Linkedin size={20} />
-                <span>LinkedIn</span>
-              </a>
-              <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className={styles.contactBtnSecondary}>
-                <Github size={20} />
-                <span>GitHub</span>
-              </a>
+            <div className={styles.hireSection}>
+              <h3 className={styles.hireSectionTitle}>Hire Me For</h3>
+              <div className={styles.roleCards}>
+                <div className={styles.roleCard}>
+                  <FlaskConical className={styles.roleIcon} />
+                  <h4>Research Assistant</h4>
+                  <p>Agricultural research, data analysis, and academic collaboration</p>
+                  <a href="https://1drv.ms/w/c/1054ed53d0671c19/EVau1hHd9MhJkU8JXj-tRFgBMBlWMKgWQZ834RPRn84zPw?e=9hdWmD" target="_blank" rel="noopener noreferrer" className={styles.viewCvBtn}>
+                    View Academic CV
+                  </a>
+                </div>
+                <div className={styles.roleCard}>
+                  <Code className={styles.roleIcon} />
+                  <h4>Software Engineer</h4>
+                  <p>Full-stack development, AI/ML integration, and system architecture</p>
+                  <a href="https://1drv.ms/w/c/1054ed53d0671c19/EbcTrUmgYPpPsHJ0PRVUabsBWyzRqdsvmjVHD7bZk8jouA?e=ugJYx6" target="_blank" rel="noopener noreferrer" className={styles.viewCvBtn}>
+                    View CV
+                  </a>
+                </div>
+                <div className={styles.roleCard}>
+                  <Lightbulb className={styles.roleIcon} />
+                  <h4>Data Analyst</h4>
+                  <p>Data processing, visualization, and insights generation</p>
+                  <a href="https://1drv.ms/w/c/1054ed53d0671c19/EbcTrUmgYPpPsHJ0PRVUabsBWyzRqdsvmjVHD7bZk8jouA?e=ugJYx6" target="_blank" rel="noopener noreferrer" className={styles.viewCvBtn}>
+                    View CV
+                  </a>
+                </div>
+              </div>
+              
+              <div className={styles.connectSection}>
+                <h3 className={styles.connectTitle}>Let's Connect</h3>
+                <div className={styles.socialGrid}>
+                  <a href="mailto:ademola.aina@outlook.com" className={styles.socialCard}>
+                    <div className={styles.socialIcon}><Mail size={24} /></div>
+                    <h4>Email</h4>
+                    <p>Direct message for opportunities</p>
+                  </a>
+                  <a href="https://linkedin.com/in/ademola-aina-m" target="_blank" rel="noopener noreferrer" className={styles.socialCard}>
+                    <div className={styles.socialIcon}><Linkedin size={24} /></div>
+                    <h4>LinkedIn</h4>
+                    <p>Professional network & updates</p>
+                  </a>
+                  <a href="https://github.com/ade-mic" target="_blank" rel="noopener noreferrer" className={styles.socialCard}>
+                    <div className={styles.socialIcon}><Github size={24} /></div>
+                    <h4>GitHub</h4>
+                    <p>Code repositories & projects</p>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </main>
-
-      <footer className={styles.footer}>
-        <div className={styles.footerContent}>
-          <div className={styles.footerLogo}>
-            <Image
-              src="/logo.svg"
-              alt="Ademola Aina Logo"
-              width={50}
-              height={50}
-            />
-            <div className={styles.footerBrand}>
-              <h3>Code & Cultivate</h3>
-              <p>Ademola Aina</p>
-            </div>
-          </div>
-          <div className={styles.footerLinks}>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#publications">Publications</a>
-            <a href="#blog">Blog</a>
-            <a href="#contact">Contact</a>
-          </div>
-          <div className={styles.footerCopyright}>
-            <p>© 2025 Ademola Aina. All rights reserved.</p>
-            <p className={styles.footerTagline}>Bridging Research and Real-World Innovation</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

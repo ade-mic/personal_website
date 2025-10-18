@@ -1,5 +1,5 @@
 .section {
-  padding: 6rem 2rem;
+  padding: 2rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -94,6 +94,38 @@
   opacity: 0.8;
   line-height: 1.6;
   font-family: var(--font-poppins);
+}
+
+.viewAllContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.viewAllBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: var(--font-poppins);
+}
+
+.viewAllBtn:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.arrowIcon {
+  width: 18px;
+  height: 18px;
 }
 
 @media (max-width: 768px) {

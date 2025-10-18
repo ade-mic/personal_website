@@ -5,6 +5,7 @@ import { getPublishedBlogPosts } from '@/lib/blogService';
 import { BlogPost } from '@/types/blog';
 import styles from './BlogSection.module.css';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export default function BlogSection() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
@@ -107,6 +108,12 @@ export default function BlogSection() {
             <p className={styles.blogExcerpt}>{post.excerpt}</p>
           </Link>
         ))}
+      </div>
+      <div className={styles.viewAllContainer}>
+        <Link href="/blog" className={styles.viewAllBtn}>
+          View All Blog Posts
+          <ArrowRight className={styles.arrowIcon} />
+        </Link>
       </div>
     </section>
   );

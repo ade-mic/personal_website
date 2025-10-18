@@ -75,6 +75,45 @@
   font-size: 1.1rem;
 }
 
+.cvButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.academicCvBtn,
+.engineeringCvBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.academicCvBtn {
+  background: var(--accent);
+  color: white;;
+  border: 2px solid white;
+}
+
+.engineeringCvBtn {
+  background: var(--accent);
+  color: white;
+  border: 2px solid var(--accent);
+}
+
+.academicCvBtn:hover,
+.engineeringCvBtn:hover {
+  background: var(--accent-dark);
+  color: white;
+  transform: translateY(-2px);
+}
+
 .researchFocus {
   background: white;
   border-top: 4px solid var(--accent);

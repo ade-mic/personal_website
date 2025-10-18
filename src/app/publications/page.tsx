@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './page.module.css';
-import { ArrowLeft, ExternalLink, Calendar, FileText, Users, BookOpen } from 'lucide-react';
+import { ArrowLeft, ExternalLink, FileText, Users, BookOpen } from 'lucide-react';
 
 const publications = [
   {
@@ -136,13 +136,6 @@ export default function PublicationsPage() {
 
   return (
     <div className={styles.container}>
-      <nav className={styles.topNav}>
-        <Link href="/" className={styles.backLink}>
-          <ArrowLeft size={20} />
-          Home
-        </Link>
-      </nav>
-
       <header className={styles.pageHeader}>
         <div className={styles.headerContent}>
           <Image
@@ -154,7 +147,7 @@ export default function PublicationsPage() {
           />
           <h1 className={styles.pageTitle}>Research & Publications</h1>
           <p className={styles.pageSubtitle}>
-            Peer-reviewed research in precision agriculture, postharvest modeling, and agricultural process engineering
+            Peer-reviewed research in precision agriculture, postharvest technology, modelling, and agricultural process engineering
           </p>
           <div className={styles.affiliation}>
             <p><strong>PhD Researcher</strong></p>
@@ -168,10 +161,9 @@ export default function PublicationsPage() {
         <div className={styles.focusContent}>
           <h2>Research Focus</h2>
           <p>
-            My research focuses on numerical and data-driven modeling for precision agriculture, 
-            computer vision applications in smart farming, and technology integration for sustainable 
-            agricultural practices. I specialize in finite element modeling of fruit mechanical properties 
-            to optimize postharvest handling and reduce food waste.
+            My research focuses on numerical and data-driven modeling for precision agriculture and 
+            postharvest systems, leveraging computer vision and integrated technologies to 
+            advance sustainable sustainable and resilient food systems.
           </p>
         </div>
       </div>
@@ -230,6 +222,17 @@ export default function PublicationsPage() {
             </div>
           </div>
         ))}
+      </div>
+      <div className={styles.cvButtons}>
+        <Link
+          href="https://1drv.ms/w/c/1054ed53d0671c19/EVau1hHd9MhJkU8JXj-tRFgBMBlWMKgWQZ834RPRn84zPw?e=9hdWmD"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.academicCvBtn}
+        >
+          <FileText size={20} />
+          View Academic CV
+        </Link>
       </div>
     </div>
   );
