@@ -13,10 +13,10 @@ export default function Home() {
           <div className={styles.heroContent}>
             <div className={styles.profileImageContainer}>
               <Image
-                src="/ADE-PW.jpg"
+                src="/headshot.jpg"
                 alt="Ademola Aina"
-                width={200}
-                height={200}
+                width={250}
+                height={250}
                 className={styles.profileImage}
                 priority
               />
